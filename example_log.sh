@@ -9,8 +9,8 @@ group_reporting
 # read_iolog=[]
 
 [write_job]
-size=50G
-numjobs=1
+size=10G
+numjobs=8
 bs=4K
 rw=write
 runtime=30
