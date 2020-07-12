@@ -9,6 +9,7 @@ write_iops_log=log.results
 write_lat_log=lat.results
 runtime=30
 time_based
+size=10G
 
 [write_job]
 numjobs=1
