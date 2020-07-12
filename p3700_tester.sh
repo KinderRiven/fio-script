@@ -47,27 +47,27 @@ fio -directory=/home/hanshukai/ssd2 -group_reporting  -rw=write $DATASET $IO $TI
 # seqwrite
 fio -directory=/home/hanshukai/ssd2 -group_reporting  -rw=write $DATASET $IO $TIME $LOG
 ./fio-fio-3.5/tools/fio_generate_plots mlog
-mkdir -p p3700/seqwrite
-mv *.svg p3700/seqwrite
+mkdir -p p4800/seqwrite
+mv *.svg p4800/seqwrite
 rm -rf *.log
 
 # seqread
 fio -group_reporting  -rw=read $DATASET $IO $TIME $LOG
 ./fio-fio-3.5/tools/fio_generate_plots mlog
-mkdir -p p3700/seqread
-mv *.svg p3700/seqread
+mkdir -p p4800/seqread
+mv *.svg p4800/seqread
 rm -rf *.log
 
 # randomwrite
 fio -directory=/home/hanshukai/ssd2 -group_reporting  -rw=randwrite $DATASET $IO $TIME $LOG
 ./fio-fio-3.5/tools/fio_generate_plots mlog
-mkdir -p p3700/randwrite
-mv *.svg p3700/randwrite
+mkdir -p p4800/randwrite
+mv *.svg p4800/randwrite
 rm -rf *.log
 
 # randomread
 fio -directory=/home/hanshukai/ssd2 -group_reporting  -rw=randread $DATASET $IO $TIME $LOG
 ./fio-fio-3.5/tools/fio_generate_plots mlog
-mkdir -p p3700/randread
-mv *.svg p3700/randread
+mkdir -p p4800/randread
+mv *.svg p4800/randread
 rm -rf *.log
