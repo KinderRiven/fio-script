@@ -13,61 +13,69 @@ echo $LOG
 fio -group_reporting  -rw=write $DATASET $IO $TIME
 
 # seqwrite
-fio -group_reporting  -rw=write $DATASET $IO $TIME $LOG
+echo 'P3700_seqwrite...'
+fio -group_reporting  -rw=write $DATASET $IO $TIME $LOG > p3700_seqwrite.log
 ./fio-fio-3.5/tools/fio_generate_plots mlog
 mkdir -p p3700/seqwrite
 mv *.svg p3700/seqwrite
-rm -rf *.log
+mv *.log p3700/seqwrite
 
 # seqread
-fio -group_reporting  -rw=read $DATASET $IO $TIME $LOG
+echo 'P3700_seqread...'
+fio -group_reporting  -rw=read $DATASET $IO $TIME $LOG > p3700_seqread.log
 ./fio-fio-3.5/tools/fio_generate_plots mlog
 mkdir -p p3700/seqread
 mv *.svg p3700/seqread
-rm -rf *.log
+mv *.log p3700/seqread
 
 # randomwrite
-fio -group_reporting  -rw=randwrite $DATASET $IO $TIME $LOG
+echo 'P3700_randwrite...'
+fio -group_reporting  -rw=randwrite $DATASET $IO $TIME $LOG > p3700_randwrite.log
 ./fio-fio-3.5/tools/fio_generate_plots mlog
 mkdir -p p3700/randwrite
 mv *.svg p3700/randwrite
-rm -rf *.log
+mv *.log p3700/randwrite
 
 # randomread
-fio -group_reporting  -rw=randread $DATASET $IO $TIME $LOG
+echo 'P3700_randread...'
+fio -group_reporting  -rw=randread $DATASET $IO $TIME $LOG > p3700_randread.log
 ./fio-fio-3.5/tools/fio_generate_plots mlog
 mkdir -p p3700/randread
 mv *.svg p3700/randread
-rm -rf *.log
+mv *.log p3700/randread
 
 # P4800
 # warm up
 fio -directory=/home/hanshukai/ssd2 -group_reporting  -rw=write $DATASET $IO $TIME
 
 # seqwrite
-fio -directory=/home/hanshukai/ssd2 -group_reporting  -rw=write $DATASET $IO $TIME $LOG
+echo 'P4800_seqwrite...'
+fio -directory=/home/hanshukai/ssd2 -group_reporting  -rw=write $DATASET $IO $TIME $LOG > p4800_seqwrite.log
 ./fio-fio-3.5/tools/fio_generate_plots mlog
 mkdir -p p4800/seqwrite
 mv *.svg p4800/seqwrite
-rm -rf *.log
+mv *.log p4800/seqwrite
 
 # seqread
-fio -group_reporting  -rw=read $DATASET $IO $TIME $LOG
+echo 'P4800_seqread...'
+fio -directory=/home/hanshukai/ssd2 -group_reporting  -rw=read $DATASET $IO $TIME $LOG > p4800_seqread.log
 ./fio-fio-3.5/tools/fio_generate_plots mlog
 mkdir -p p4800/seqread
 mv *.svg p4800/seqread
-rm -rf *.log
+mv *.log p4800/seqread
 
 # randomwrite
-fio -directory=/home/hanshukai/ssd2 -group_reporting  -rw=randwrite $DATASET $IO $TIME $LOG
+echo 'P4800_randwrite...'
+fio -directory=/home/hanshukai/ssd2 -group_reporting  -rw=randwrite $DATASET $IO $TIME $LOG > p4800_randwrite.log
 ./fio-fio-3.5/tools/fio_generate_plots mlog
 mkdir -p p4800/randwrite
 mv *.svg p4800/randwrite
-rm -rf *.log
+mv *.log p4800/randwrite
 
 # randomread
-fio -directory=/home/hanshukai/ssd2 -group_reporting  -rw=randread $DATASET $IO $TIME $LOG
+echo 'P4800_randread...'
+fio -directory=/home/hanshukai/ssd2 -group_reporting  -rw=randread $DATASET $IO $TIME $LOG > p4800_randread.log
 ./fio-fio-3.5/tools/fio_generate_plots mlog
 mkdir -p p4800/randread
 mv *.svg p4800/randread
-rm -rf *.log
+mv *.log p4800/randread
