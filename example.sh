@@ -1,7 +1,7 @@
 [global]
-rw=seq
+rw=write
 direct=0
-numjob=1
+numjobs=1
 
 [file1]
 name=seq_job_1
