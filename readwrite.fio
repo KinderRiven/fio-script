@@ -1,4 +1,5 @@
 [global]
+name=file
 thread
 direct=1
 ioengine=libaio 
