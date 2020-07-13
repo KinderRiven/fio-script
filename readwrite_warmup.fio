@@ -5,13 +5,13 @@ direct=1
 ioengine=libaio 
 
 [write_job]
-size=5G
+size=50G
 numjobs=2
 bs=16K
 rw=write
 
 [read_job]
-size=5G
+size=50G
 numjobs=2
 bs=16K
 rw=write
