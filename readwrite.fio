@@ -12,6 +12,6 @@ rw=write
 
 [read_job]
 size=50G
-numjobs2=2
+numjobs=2
 bs=16K
 rw=read
