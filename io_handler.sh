@@ -9,7 +9,7 @@ echo $TIME
 echo $LOG
 
 # P3700
-# warm up
+# warm_up
 fio -group_reporting  -rw=write $DATASET $IO $TIME
 
 # seqwrite
@@ -45,7 +45,7 @@ mv *.svg p3700/randread
 mv *.log p3700/randread
 
 # P4800
-# warm up
+# warm_up
 fio -directory=/home/hanshukai/ssd2 -group_reporting  -rw=write $DATASET $IO $TIME
 
 # seqwrite
